@@ -9,18 +9,6 @@ variable "zone_name" {
   description = "Name of the zone i.e your domain name"
 }
 
-variable "private_zone" {
-  type        = bool
-  description = "(optional) Specify if private zone needs to be created. Default: false"
-  default     = false
-}
-
-variable "vpc_id" {
-  type        = string
-  description = "(optional) Specify VPC ID for private zone. Default: null"
-  default     = null
-}
-
 variable "comment" {
   type        = string
   description = "(optional) Add a comment to your hosted zone. Default 'Managed by Terraform'"
