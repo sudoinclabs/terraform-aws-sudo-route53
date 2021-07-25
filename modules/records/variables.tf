@@ -1,3 +1,8 @@
+variable "enabled" {
+  type        = bool
+  description = "(optional) Keep this module disabled"
+  default     = true
+}
 variable "zone_id" {
   type        = string
   description = "ID of hosted zone where the records will be added."

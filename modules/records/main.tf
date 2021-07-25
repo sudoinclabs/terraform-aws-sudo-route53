@@ -1,6 +1,9 @@
+locals {
+  records = var.enabled == true ? var.records : ([])
+}
 
 resource "aws_route53_record" "this" {
-  for_each = var.records
+  for_each = local.records
 
   allow_overwrite = true
   zone_id         = var.zone_id
