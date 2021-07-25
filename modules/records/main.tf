@@ -1,5 +1,5 @@
 locals {
-  records = var.enabled == true ? var.records : ([])
+  records = var.enabled == true ? var.records : toset([])
 }
 
 resource "aws_route53_record" "this" {
